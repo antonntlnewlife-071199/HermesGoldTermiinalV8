@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HERMES GOLD TERMINAL V8 - Private Terminal</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#0a0a0a;color:#fff;min-height:100vh}
+.header{background:linear-gradient(135deg,#1a1a1a,#000);border-bottom:2px solid #FFD700;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+.logo{font-family:'Orbitron',monospace;color:#FFD700;font-weight:700;font-size:18px}
+.lang-switch{display:flex;gap:8px;background:#222;border-radius:20px;padding:4px}
+.lang-btn{padding:6px 14px;border-radius:16px;border:none;background:transparent;color:#888;cursor:pointer;font-weight:600;font-size:13px}
+.lang-btn.active{background:#FFD700;color:#000}
+.container{max-width:900px;margin:0 auto;padding:20px}
+.badge{display:inline-block;background:linear-gradient(135deg,#FFD700,#FFA500);color:#000;padding:6px 14px;border-radius:20px;font-weight:700;font-size:12px;margin-bottom:15px}
+h1{font-family:'Orbitron',monospace;font-size:26px;color:#FFD700;margin-bottom:10px}
+.subtitle{color:#aaa;margin-bottom:25px;line-height:1.5}
+.card{background:linear-gradient(135deg,#1e1e1e,#151515);border:1px solid #333;border-radius:16px;padding:20px;margin-bottom:20px;position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#FFD700,#FFA500)}
+.card-title{color:#FFD700;font-weight:700;margin-bottom:15px;display:flex;align-items:center;gap:8px}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.info-box{background:#0f0f0f;border:1px solid #2a2a2a;border-radius:10px;padding:12px}
+.info-label{font-size:11px;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.info-value{font-family:'Orbitron',monospace;color:#FFD700;font-weight:700;word-break:break-all;font-size:13px}
+.btn{display:block;width:100%;padding:14px;border-radius:12px;border:none;font-weight:700;font-size:14px;cursor:pointer;text-align:center;text-decoration:none;margin-bottom:10px;transition:0.2s}
+.btn-gold{background:linear-gradient(135deg,#FFD700,#FFA500);color:#000}
+.btn-dark{background:#222;color:#fff;border:1px solid #444}
+.btn:hover{transform:translateY(-2px);box-shadow:0 5px 20px rgba(255,215,0,0.3)}
+.steps{counter-reset:step}
+.step{display:flex;gap:15px;margin-bottom:18px}
+.step-num{background:#FFD700;color:#000;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0;font-size:14px}
+.step-content h4{color:#fff;font-size:14px;margin-bottom:4px}
+.step-content p{color:#aaa;font-size:13px;line-height:1.5}
+.telegram-card{background:linear-gradient(135deg,#0088cc22,#0088cc11);border:1px solid #0088cc44}
+.footer{text-align:center;padding:30px 20px;color:#555;font-size:12px}
+.id-only{display:block}
+.en-only{display:none}
+body.lang-en .id-only{display:none}
+body.lang-en .en-only{display:block}
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="logo">HERMES V8 TERMINAL</div>
+  <div class="lang-switch">
+    <button class="lang-btn active" id="btn-id" onclick="setLang('id')">🇮🇩 ID</button>
+    <button class="lang-btn" id="btn-en" onclick="setLang('en')">🇬🇧 EN</button>
+  </div>
+</div>
+
+<div class="container">
+  <div class="badge">68% WINRATE | XAUUSD M15 | AUTO TP/SL</div>
+  <h1 class="id-only">PRIVATE TERMINAL KAMU AKTIF! 🔥</h1>
+  <h1 class="en-only">YOUR PRIVATE TERMINAL IS ACTIVE! 🔥</h1>
+  
+  <p class="subtitle id-only">Selamat datang Buyer HERMES GOLD TERMINAL V8! License kamu sudah aktif. Download EA & Set File di bawah.</p>
+  <p class="subtitle en-only">Welcome Buyer HERMES GOLD TERMINAL V8! Your license is active. Download EA & Set File below.</p>
+
+  <div class="card">
+    <div class="card-title">🔑 <span class="id-only">INFO LICENSE KAMU</span><span class="en-only">YOUR LICENSE INFO</span></div>
+    <div class="info-grid">
+      <div class="info-box">
+        <div class="info-label">Email</div>
+        <div class="info-value" id="info-email">-</div>
+      </div>
+      <div class="info-box">
+        <div class="info-label">MT5 Account</div>
+        <div class="info-value" id="info-mt5">-</div>
+      </div>
+      <div class="info-box" style="grid-column:span 2">
+        <div class="info-label">License Key</div>
+        <div class="info-value" id="info-key">-</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📥 <span class="id-only">DOWNLOAD CENTER (BILINGUAL)</span><span class="en-only">DOWNLOAD CENTER (BILINGUAL)</span></div>
+    
+    <a class="btn btn-gold" href="https://drive.google.com/file/d/1gAuulpCwscoK7ZM3rBBGoT_xvwx6wI6t/view" target="_blank">
+      <span class="id-only">⬇️ DOWNLOAD EA HERMES V8 (.ex5)</span>
+      <span class="en-only">⬇️ DOWNLOAD HERMES V8 EA (.ex5)</span>
+    </a>
+    
+    <a class="btn btn-dark" href="https://drive.google.com/file/d/1WtxyvzQeATJn1Iw4KZEt5AgOgSYn2Vbn/view" target="_blank">
+      <span class="id-only">📄 DOWNLOAD PANDUAN INSTALL BILINGUAL (ID+EN)</span>
+      <span class="en-only">📄 DOWNLOAD BILINGUAL INSTALL GUIDE (ID+EN)</span>
+    </a>
+
+    <a class="btn btn-dark" id="btn-set" href="#" target="_blank">
+      <span class="id-only">⚙️ DOWNLOAD SET FILE XAUUSD M15 (.set)</span>
+      <span class="en-only">⚙️ DOWNLOAD XAUUSD M15 SET FILE (.set)</span>
+    </a>
+    <p style="color:#666;font-size:11px;text-align:center;margin-top:8px" class="id-only">Set file auto-generated sesuai MT5 kamu</p>
+    <p style="color:#666;font-size:11px;text-align:center;margin-top:8px" class="en-only">Set file auto-generated for your MT5</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🚀 <span class="id-only">CARA PASANG 2 MENIT</span><span class="en-only">HOW TO INSTALL 2 MINUTES</span></div>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><h4 class="id-only">Download 3 File</h4><h4 class="en-only">Download 3 Files</h4><p class="id-only">EA + Panduan Bilingual + Set File M15 dari tombol di atas</p><p class="en-only">EA + Bilingual Guide + M15 Set File from buttons above</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><h4>MT5 → Open Data Folder</h4><p class="id-only">File → Open Data Folder → MQL5 → Experts → Paste HERMES-V8.ex5 → Restart MT5</p><p class="en-only">File → Open Data Folder → MQL5 → Experts → Paste HERMES-V8.ex5 → Restart MT5</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><h4>XAUUSD M15 + Smile 😊</h4><p class="id-only">Buka XAUUSD M15 → Drag EA ke chart → Input License + MT5 → Load Set File → OK → Smile = AKTIF!</p><p class="en-only">Open XAUUSD M15 → Drag EA to chart → Input License + MT5 → Load Set File → OK → Smile = ACTIVE!</p></div></div>
+    </div>
+  </div>
+
+  <div class="card telegram-card">
+    <div class="card-title">💬 Telegram Private</div>
+    <p class="id-only" style="color:#aaa;font-size:13px;margin-bottom:12px">Join untuk Signal LIVE, Update V8.1, Support 24 Jam!</p>
+    <p class="en-only" style="color:#aaa;font-size:13px;margin-bottom:12px">Join for LIVE Signals, Updates V8.1, 24h Support!</p>
+    <a class="btn btn-gold" href="https://t.me/+zypCDPKkQ904YjQ1" target="_blank" style="background:#0088cc;color:#fff">🚀 JOIN PRIVATE TELEGRAM</a>
+  </div>
+
+  <div class="footer">
+    HERMES GOLD TERMINAL V8 | 68% Winrate | XAUUSD M15<br>
+    Antonius | antonntlnewlife@gmail.com | Buyer: WIDYA MT5 10905323
+  </div>
+</div>
+
+<script>
+function getParam(name){
+  var url = new URL(window.location.href);
+  return url.searchParams.get(name) || "";
+}
+function setLang(l){
+  localStorage.setItem('hermes_lang', l);
+  document.body.className = l === 'en' ? 'lang-en' : '';
+  document.getElementById('btn-id').classList.toggle('active', l==='id');
+  document.getElementById('btn-en').classList.toggle('active', l==='en');
+  document.documentElement.lang = l;
+}
+(function(){
+  var email = getParam('email') || 'widya00451477@gmail.com';
+  var key = getParam('key') || 'HERMES-V8-5323-K0FU-8927';
+  var mt5 = getParam('mt5') || '10905323';
+  
+  document.getElementById('info-email').textContent = decodeURIComponent(email);
+  document.getElementById('info-key').textContent = key;
+  document.getElementById('info-mt5').textContent = mt5;
+
+  var saved = localStorage.getItem('hermes_lang');
+  if(!saved){
+    var browserLang = navigator.language || 'id';
+    saved = browserLang.toLowerCase().startsWith('id') ? 'id' : 'en';
+  }
+  setLang(saved);
+
+  var setContent = "[HERMES V8 SET]\nMT5=" + mt5 + "\nLicense=" + key + "\nSymbol=XAUUSD\nTF=M15\nTP=300\nSL=150\n";
+  var blob = new Blob([setContent], {type: 'text/plain'});
+  document.getElementById('btn-set').href = URL.createObjectURL(blob);
+  document.getElementById('btn-set').download = "HERMES-V8-" + mt5 + "-M15.set";
+})();
+</script>
+</body>
+</html>
